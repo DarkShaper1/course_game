@@ -1,0 +1,283 @@
+@-webkit-keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	color: white;
+	margin: 0;
+	padding: 0;
+	background-size: 250% 250%;
+	background-image: linear-gradient(-45deg, #167CF2 0%, #1A3EDE 100%);
+	-webkit-animation: AnimateBG 10s ease infinite;
+    animation: AnimateBG 10s ease infinite;
+}
+
+a {
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: underline;
+	font-weight: 500;
+	text-decoration-skip-ink: none;
+}
+
+a:hover {
+	color: white;
+}
+
+.container {
+	padding: 0 50px;
+	height: 100%;
+}
+
+.header {
+	display: flex;
+	height: 100px;
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.header>img {
+	margin: auto 0;
+}
+
+#logo2 {
+	margin-left: 25px;
+}
+
+.header>p {
+	font-weight: 500;
+	font-size: 10pt;
+	margin: auto 0;
+	margin-left: 5px;
+}
+
+.login {
+	display: flex;
+	margin: auto 0 auto auto;
+}
+
+.login>#login {
+	font-weight: 700;
+	font-size: 20pt;
+	margin: auto 0;
+	margin-left: 10px;
+}
+
+.content {
+	display: flex;
+	min-height: calc(100vh - 262px);
+	width: 60%;
+	margin: 0 auto;
+	min-width: 660px;
+	padding: 30px 0;
+}
+
+.form, .description {
+	width: 50%;
+	margin: auto 0;
+}
+
+.form {
+	padding-right: 30px;
+	border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.description {
+	padding-left: 30px;
+}
+
+.form>h1 {
+	text-align: center;
+	margin: 0 0 15px 0;
+	font-size: 26pt;
+	font-weight: 700;
+}
+
+.login-buttons {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto 15px auto;
+}
+
+.login-buttons>a {
+	display: block;
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14pt;
+	color: white;
+	text-decoration: none;
+}
+
+.login-buttons>a.active {
+	text-decoration: underline;
+}
+
+.login-buttons>a:hover {
+	text-decoration: underline;
+}
+
+.login-buttons>a#login {
+	border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.form>form>input[type=text], .form>form>input[type=password], .form>form>input[type=email] {
+	width: 100%;
+	border: none;
+	outline: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+	background-color: inherit;
+	padding: 10px 15px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	margin-bottom: 20px;
+	color: rgba(255, 255, 255);
+	font-size: 14pt;
+}
+
+.form>form>input[type=text]::placeholder, .form>form>input[type=password]::placeholder, .form>form>input[type=email]::placeholder {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 14pt;
+}
+
+.form>form>input[type=text]:focus, .form>form>input[type=password]:focus, .form>form>input[type=email]:focus {
+	outline: 0;
+}
+
+.form>form>input[type=submit] {
+	width: 100%;
+	outline: 0;
+	border: none;
+	color: white;
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 10px 0;
+	text-align: center;
+	border-radius: 20px;
+	font-size: 14pt;
+	font-weight: 700;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.form>form>input[type=submit]:hover {
+	outline: 1px solid white;
+}
+
+.form>form>.check_data>input[type=checkbox] {
+	margin-bottom: 20px;
+	transform: scale(1.3);
+	background-color: inherit;
+}
+
+.form>form>.check_data {
+	display: flex;
+}
+
+.form>form>.check_data>label {
+	font-size: 10pt;
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: 500;
+	margin-bottom: 20px;
+	margin-left: 5px;
+}
+
+.form-footer {
+	display: flex;
+	justify-content: space-around;
+	font-size: 10pt;
+}
+
+.description {
+	font-size: 10pt;
+}
+
+.footer {
+	display: flex;
+	height: 100px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer>p {
+	margin: auto 0;
+	font-size: 12pt;
+	margin-right: 20px;
+}
+
+.footer>p#telephone {
+	font-weight: 500;
+}
+
+.footer>a#email {
+	font-size: 12pt;
+	margin-right: 20px;
+	margin-left: 0px;
+}
+
+.footer>img {
+	margin: auto 0;
+	margin-left: auto;
+}
+
+.footer>a {
+	margin: auto 0;
+	margin-left: 20px;
+	font-size: 12pt;
+}
