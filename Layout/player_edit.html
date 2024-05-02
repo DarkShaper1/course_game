@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <link rel="preload" href="fonts/open-sans.woff2" as="font" type="font/woff2" crossorigin> -->
+		<link rel="stylesheet" href="assets/css/style.css">
+		<title>Игра</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<img src="assets/img/logo.png" height="70px" alt="Логотип ИВТ">
+				<img id="logo2" src="assets/img/logo2.png" alt="Логотип ЯрГУ">
+				<p>ЯРОСЛАВСКИЙ ГОСУДАРСТВЕННЫЙ<br>УНИВЕРСИТЕТ ИМ. П. Г. ДЕМИДОВА</p>
+				<div class="login">
+					<img src="assets/img/avatar.png" height="46px" width="46px" alt="Аватар ИВТ">
+					<span id="login">Гость</span>
+				</div>
+			</div>
+			<div class="content-edit-player">
+				<h1>РЕДАКТОР ПЕРСОНАЖА</h1>
+				<div class="svg_player">
+					<object id="player" data="assets/img/player.svg" type="image/svg+xml"></object>
+				</div>
+				<div class="colors">
+					<div class="active" onclick="change_color('#00FF00', this)" style="background-color: #00FF00;"></div>
+					<div onclick="change_color('#E93274', this)" style="background-color: #E93274;"></div>
+					<div onclick="change_color('#DA32E9', this)" style="background-color: #DA32E9;"></div>
+					<div onclick="change_color('#32E9C8', this)" style="background-color: #32E9C8;"></div>
+					<div onclick="change_color('#E5E932', this)" style="background-color: #E5E932;"></div>
+					<div onclick="change_color('#2140AC', this)" style="background-color: #2140AC;"></div>
+					<input id="color_picker" type="color" value="#ffffff">
+				</div>
+				<div class="play-button">
+					Играть
+				</div>
+			</div>
+			<div class="footer">
+				<p id="telephone">+7 (4852) 78-85-86</p>
+				<a href="#" id="email">icsdep@uniyar.ac.ru</a>
+				<p id="address">ул. Союзная, 144, 7-й корпус</p>
+				<img src="assets/img/vk.png" width="25px" height="15px" alt="Логотип ВК">
+				<a href="#">Абитуриентам</a>
+				<a href="#">Профбюро</a>
+				<a href="#">Студенческое научное общество</a>
+			</div>
+		</div>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>

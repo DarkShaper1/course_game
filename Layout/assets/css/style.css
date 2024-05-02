@@ -64,6 +64,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-size: 250% 250%;
+	background-image: -o-linear-gradient(135deg, #167CF2 0%, #1A3EDE 100%);
 	background-image: linear-gradient(-45deg, #167CF2 0%, #1A3EDE 100%);
 	-webkit-animation: AnimateBG 10s ease infinite;
     animation: AnimateBG 10s ease infinite;
@@ -73,7 +74,8 @@ a {
 	color: rgba(255, 255, 255, 0.7);
 	text-decoration: underline;
 	font-weight: 500;
-	text-decoration-skip-ink: none;
+	-webkit-text-decoration-skip-ink: none;
+	        text-decoration-skip-ink: none;
 }
 
 a:hover {
@@ -86,6 +88,8 @@ a:hover {
 }
 
 .header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 100px;
 	margin: 0 auto;
@@ -108,6 +112,8 @@ a:hover {
 }
 
 .login {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin: auto 0 auto auto;
 }
@@ -120,6 +126,8 @@ a:hover {
 }
 
 .content {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	min-height: calc(100vh - 262px);
 	width: 60%;
@@ -150,8 +158,12 @@ a:hover {
 }
 
 .login-buttons {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin: 0 auto 15px auto;
 }
 
@@ -193,6 +205,26 @@ a:hover {
 	font-size: 14pt;
 }
 
+.form>form>input[type=text]::-webkit-input-placeholder, .form>form>input[type=password]::-webkit-input-placeholder, .form>form>input[type=email]::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 14pt;
+}
+
+.form>form>input[type=text]::-moz-placeholder, .form>form>input[type=password]::-moz-placeholder, .form>form>input[type=email]::-moz-placeholder {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 14pt;
+}
+
+.form>form>input[type=text]:-ms-input-placeholder, .form>form>input[type=password]:-ms-input-placeholder, .form>form>input[type=email]:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 14pt;
+}
+
+.form>form>input[type=text]::-ms-input-placeholder, .form>form>input[type=password]::-ms-input-placeholder, .form>form>input[type=email]::-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 14pt;
+}
+
 .form>form>input[type=text]::placeholder, .form>form>input[type=password]::placeholder, .form>form>input[type=email]::placeholder {
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 14pt;
@@ -223,11 +255,15 @@ a:hover {
 
 .form>form>.check_data>input[type=checkbox] {
 	margin-bottom: 20px;
-	transform: scale(1.3);
+	-webkit-transform: scale(1.3);
+	    -ms-transform: scale(1.3);
+	        transform: scale(1.3);
 	background-color: inherit;
 }
 
 .form>form>.check_data {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -240,8 +276,11 @@ a:hover {
 }
 
 .form-footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 	font-size: 10pt;
 }
 
@@ -250,6 +289,8 @@ a:hover {
 }
 
 .footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 100px;
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -280,4 +321,126 @@ a:hover {
 	margin: auto 0;
 	margin-left: 20px;
 	font-size: 12pt;
+}
+
+.content-edit-player {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	min-height: calc(100vh - 262px);
+	margin: 0 auto;
+	min-width: 660px;
+	padding: 30px 0;
+}
+
+.content-edit-player>h1 {
+	text-align: center;
+	font-size: 40pt;
+	font-weight: 700;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.svg_player>object {
+	display: block;
+	margin: 0 auto;
+}
+
+.colors {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.colors>div, .colors>input {
+	width: 75px;
+	height: 75px;
+	margin: 0 20px;
+	cursor: pointer;
+}
+
+.colors>input {
+	-webkit-appearance: none;
+	border: none;
+	padding: 0;
+	background-color: #fff;
+}
+
+.colors>input::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+.colors>input::-webkit-color-swatch {
+	border: none;
+	background-color: white !important;
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            	linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            	linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.colors>input::-moz-color-swatch {
+	border: none;
+	background-color: white !important;
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            	linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            	linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.colors>.active {
+	outline: 10px solid white;
+	width: 55px;
+	height: 55px;
+	margin: 0 30px;
+	margin-top: 10px;
+}
+
+.play-button {
+	width: 50%;
+	margin: 0 auto;
+	padding: 15px 0;
+	text-align: center;
+	font-size: 20pt;
+	font-weight: 700;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 50px;
+	cursor: pointer;
+}
+.play-button:hover {
+	outline: 1px solid white;
+}
+
+.game-header {
+	height: 50px;
+	border: none;
+}
+
+.game-header>p {
+	font-size: 8pt;
+}
+
+.game-header>.login>#login {
+	font-size: 14pt;
+	margin-left: 5px;
+}
+
+.game-footer {
+	height: 50px;
+	border: none;
+}
+
+.game {
+	min-height: calc(100vh - 100px);
+	background-color: white;
 }
