@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="preload" href="fonts/open-sans.woff2" as="font" type="font/woff2" crossorigin> -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Игра</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
+            #game {
+                width: 100%;
+                height: 100%;
+            }
+
+            canvas {
+              width:100%!important; 
+            }
+        </style>
+        <script src="assets/js/phaser.min.js"></script>       
+        <script src="assets/js/game.js"></script> 
+    </head>
+    <body>
+        <div class="container">
+            <div class="header game-header">
+                <img src="assets/img/logo.png" height="40px" alt="Логотип ИВТ">
+                <img id="logo2" src="assets/img/logo2.png" height="35px" alt="Логотип ЯрГУ">
+                <p>ЯРОСЛАВСКИЙ ГОСУДАРСТВЕННЫЙ<br>УНИВЕРСИТЕТ ИМ. П. Г. ДЕМИДОВА</p>
+                <div class="login">
+                    <img src="assets/img/avatar.png" height="30px" width="30px" alt="Аватар ИВТ">
+                    <span id="login">Гость</span>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="game" style="display: block; width: 100%; text-align: center">
+        </div>
+        <div id="dialogue_container">
+            <img id="teacher-img" src="assets/img/teacher4.png" alt="" height="350px">
+            <div id="teacher-name">
+                Имя совы
+            </div>
+            <div id="dialogue">
+                <div class="dialogue-body">
+                    <div id="dialogue-head">
+                        <p id="number-question">Вопрос <span id="current-question">0</span>/<span id="question-count">15</span></p>
+                        <p id="question"></p>
+                    </div>
+                    <div id="answers"></div>
+                </div>
+            </div>
+            <div id="buttons">
+                <div id="prev-button" onclick="prevDialogue()">
+                    Назад
+                </div>
+                <div id="next-button" onclick="nextDialogue()">
+                    Далее
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer game-footer">
+                <p id="telephone">+7 (4852) 78-85-86</p>
+                <a href="#" id="email">icsdep@uniyar.ac.ru</a>
+                <p id="address">ул. Союзная, 144, 7-й корпус</p>
+                <img src="assets/img/vk.png" width="25px" height="15px" alt="Логотип ВК">
+                <a href="#">Абитуриентам</a>
+                <a href="#">Профбюро</a>
+                <a href="#">Студенческое научное общество</a>
+            </div>
+        </div>
+        
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
